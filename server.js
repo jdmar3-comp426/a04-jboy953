@@ -2,15 +2,15 @@
 var express = require("express")
 var app = express()
 // Require database SCRIPT file
-
+var db = require("./database.js")
 // Require md5 MODULE
-
+var md5 = require("./node_modules/md5/md5.js");
 // Make Express use its own built-in body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set server port
-
+HTTP_PORT = 5000
 // Start server
 app.listen(HTTP_PORT, () => {
     console.log("Server running on port %PORT%".replace("%PORT%",HTTP_PORT))
@@ -37,7 +37,7 @@ app.get("/app/users", (req, res) => {
 // DELETE a single user (HTTP method DELETE) at endpoint /app/delete/user/:id
 
 // Default response for any other request
-app.use(function(req, res){
-	res.json({"message":"Endpoint not found. (404)"});
+app.use(function(req, res) {
+	res.json({"message":"Endpoint not founddadsad. (404)"});
     res.status(404);
 });
